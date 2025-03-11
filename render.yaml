@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: finance-visualizer
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: PORT
+        value: 3000
+    healthCheckPath: / 
